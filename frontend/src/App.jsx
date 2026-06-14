@@ -22,10 +22,10 @@ export default function App() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/generate",
-        {
+         `${import.meta.env.VITE_API_URL}/generate`,
+         {
           prompt,
-        }
+          }
       );
 
       setResult(response.data);
